@@ -12,6 +12,8 @@ class Board:
         print("")
 
     def set_point(self, point_type, x, y):
+        if x < 1 or x > 3 or y < 1 or y > 3:
+            return False
         if self.board[y-1][x-1] == " ":
             self.board[y-1][x-1] = point_type
             return True
